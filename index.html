@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news cover | home</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css"
+    />
+
+    <!-- bootstarp remote cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- local style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header id="header">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><span class="left">News</span>Cover</a
+          >
+
+          <!-- toggler button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- options -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    class="rounded-circle"
+                    src="./images/mir.JPG"
+                    alt="mir"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- category section start -->
+    <section id="category">
+      <div class="container">
+        <ul
+          id="category-nav"
+          class="category-nav d-flex justify-content-between"
+        >
+          <li class="nav-link">item-2</li>
+          <li class="nav-link">item-3</li>
+          <li class="nav-link">item-4</li>
+          <li class="nav-link">item-5</li>
+        </ul>
+
+        <!-- Found result section -->
+        <div id="found-result" class="found-result">
+          <p>4 items found for category Entertainment</p>
+        </div>
+      </div>
+    </section>
+    <!-- category section start -->
+
+    <!-- main section start -->
+    <div id="main">
+      <div class="container">
+        <div id="news-wrapper" class="news-wrapper">
+          <!-- news item -->
+
+          <div class="card mb-3 p-2">
+            <div class="row g-0">
+              <!-- news thumbnail -->
+              <div class="col-md-3">
+                <img src="..." class="img-fluid rounded-start" alt="..." />
+              </div>
+
+              <!-- News body -->
+              <div class="col-md-9 p-2">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text py-4">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+
+                  <!-- News footer info -->
+                  <div
+                    class="card-text d-flex justify-content-between align-items-center"
+                  >
+                    <!-- author -->
+                    <div class="author d-flex justify-content-between">
+                      <img
+                        class="rounded-circle"
+                        src="./images/mir.JPG"
+                        alt="athor"
+                      />
+                      <div
+                        class="card-text d-flex flex-column ps-2 justify-content-center"
+                      >
+                        <small class="text-muted">name</small>
+                        <small class="text-muted">dd-mm-yy</small>
+                      </div>
+                    </div>
+
+                    <!-- news watch -->
+                    <div class="d-flex align-items-center">
+                      <p class=""><i class="fa-duotone fa-eye"> </i></p>
+                      <p class="fw-bold">
+                        <span id="views" class="fw-bold"> 1.1</span>M
+                      </p>
+                    </div>
+
+                    <!-- reating -->
+                    <div
+                      class="reat d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fa-duotone fa-star"></i>
+                      <i class="fa-duotone fa-star"></i>
+                      <i class="fa-duotone fa-star"></i>
+                      <i class="fa-duotone fa-star"></i>
+                      <i class="fa-duotone fa-star-sharp-half"></i>
+                    </div>
+
+                    <!-- show more button -->
+                    <button class="btn btn-light">
+                      <i class="fa-duotone fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main section end -->
+
+    <!-- bootstarp remote js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- script -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

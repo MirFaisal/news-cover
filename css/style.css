@@ -1,0 +1,74 @@
+/* import front */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&family=Roboto+Condensed&display=swap");
+
+/* variabiles */
+:root {
+  --primary-font: "Bree Serif", serif;
+  --secoundery-font: "Roboto Condensed", sans-serif;
+  --third-font: "Poppins", sans-serif;
+
+  --blur: #5d5fef;
+}
+/* common style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  scroll-behavior: smooth;
+  background: #f6f6f7;
+}
+.btn {
+  color: var(--blur) !important;
+}
+
+/* navbar style */
+#header .navbar {
+  padding-block: 33px;
+}
+
+#header .navbar .navbar-brand .left {
+  margin-inline-end: 3px;
+  padding-block-start: 3px;
+  padding-inline-start: 3px;
+  display: inline-block;
+  width: 56px;
+  height: 37px;
+  background: #5d5fef;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+/* category section style */
+#category {
+    margin-block-end: 32px;
+}
+
+#category .category-nav {
+  padding-block: 35px;
+  font-family: var(--secoundery-font);
+  font-weight: bold;
+}
+
+#category .category-nav .nav-link:hover {
+  color: var(--blur);
+  cursor: pointer;
+}
+
+#category .found-result {
+  padding-block: 21px;
+  padding-inline-start: 18px;
+  border-radius: 5px;
+  background: #ffffff;
+}
