@@ -52,7 +52,7 @@ body {
 
 /* category section style */
 #category {
-    margin-block-end: 32px;
+  margin-block-end: 32px;
 }
 
 #category .category-nav {
@@ -71,4 +71,8 @@ body {
   padding-inline-start: 18px;
   border-radius: 5px;
   background: #ffffff;
+}
+/* main sectio style */
+#main .news-wrapper .card .card-body .author img {
+  width: 50px !important;
 }
