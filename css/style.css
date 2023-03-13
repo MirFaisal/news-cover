@@ -33,8 +33,20 @@ body {
   color: var(--blur) !important;
 }
 .active {
+  padding-block-end: 0;
+  position: relative;
+  color: var(--blur) !important;
+}
+.active::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 120%;
+  left: 50%;
   color: var(--blur);
-  border-bottom: 2px solid var(--blur);
+  background: var(--blur);
+  transform: translateX(-50%);
 }
 
 /* navbar style */

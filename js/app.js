@@ -17,7 +17,7 @@ const loadNewsCategory = async () => {
       // creating dinamic element
       const li = document.createElement("li");
       li.classList.add("nav-link");
-      li.setAttribute("OnClick", `category(${categorie.category_id})`);
+      li.setAttribute("OnClick", `category(this, ${categorie.category_id})`);
       li.innerText = categorie.category_name;
 
       categoryNavElement.appendChild(li);
@@ -26,9 +26,31 @@ const loadNewsCategory = async () => {
 };
 
 // load news from category
-const category = (id) => {
+const active = (element) => {
+  let x = 0;
+  if (element.classList.contains("active")) {
+    console.log("ami ACHI");
+  }
+  if (!element.classList.contains("active")) {
+    x += 1;
+    console.log("nai");
+    element.classList.add("active");
+    console.log("ami add hoici");
+  }
+  console.log(x);
+};
+
+const category = (element, id) => {
   loader(true);
-  console.log(id);
+
+  const active = document.querySelector(".category-nav .active");
+  console.log(active);
+  // remove previous active class
+  if (active && !element.classList.contains("active")) {
+    active.classList.remove("active");
+  }
+  element.classList.add("active");
+
   //load news data from cetagory
   const url = `https://openapi.programming-hero.com/api/news/category/0${id} `;
 
