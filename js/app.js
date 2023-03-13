@@ -26,25 +26,10 @@ const loadNewsCategory = async () => {
 };
 
 // load news from category
-const active = (element) => {
-  let x = 0;
-  if (element.classList.contains("active")) {
-    console.log("ami ACHI");
-  }
-  if (!element.classList.contains("active")) {
-    x += 1;
-    console.log("nai");
-    element.classList.add("active");
-    console.log("ami add hoici");
-  }
-  console.log(x);
-};
-
 const category = (element, id) => {
   loader(true);
 
   const active = document.querySelector(".category-nav .active");
-  console.log(active);
   // remove previous active class
   if (active && !element.classList.contains("active")) {
     active.classList.remove("active");
@@ -195,5 +180,4 @@ const loader = (boolean) => {
     loaderElement.classList.add("d-none");
   }
 };
-
 loadNewsCategory();
