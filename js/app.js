@@ -17,6 +17,8 @@ const loadNewsCategory = async () => {
       // creating dinamic element
       const li = document.createElement("li");
       li.classList.add("nav-link");
+      li.classList.add("pe-2");
+      li.classList.add("mb-3");
       li.setAttribute("OnClick", `category(this, ${categorie.category_id})`);
       li.innerText = categorie.category_name;
 
@@ -69,7 +71,7 @@ const category = (element, id) => {
         cardElement.innerHTML = `
                   <div class="row g-0">
                     <!-- news thumbnail -->
-                    <div class="col-md-3">
+                    <div class="col-md-3 d-flex justify-content-center justify-content-lg-start">
                       <img src="${
                         news.thumbnail_url
                       }" class="img-fluid rounded-start" alt="..." />
@@ -78,36 +80,37 @@ const category = (element, id) => {
                     <!-- News body -->
                     <div class="col-md-9 p-2">
                       <div class="card-body">
-                        <h5 class="card-title">${news.title}</h5>
-                        <p class="card-text py-4">
+                        <h5 class="card-title fw-bold text-capitalize">${
+                          news.title
+                        }</h5>
+                        <p class="card-text py-4" style="text-align:justify">
                           ${news.details.slice(0, 320)}...
                         </p>
       
                         <!-- News footer info -->
                         <div
-                          class="card-text d-flex justify-content-between align-items-center"
+                          class="card-text d-flex justify-content-between align-items-center flex-wrap"
                         >
                           <!-- author -->
-                          <div class="author d-flex justify-content-between">
+                          <div class="author d-flex justify-content-lg-between justify-content-center flex-wrap pe-2 pb-2">
                             <img
                               class="rounded-circle"
                               src="${news.author.img}"
                               alt="athor"
                             />
                             <div
-                              class="card-text d-flex flex-column ps-2 justify-content-center"
+                              class="card-text d-flex flex-column ps-2 pe-sm-1 justify-content-center"
                             >
-                              <small class="text-muted">${
-                                news.author.name
-                              }</small>
-                              <small class="text-muted">${
-                                news.author.published_date
-                              }</small>
+                              <small class="text-muted">
+                              ${news.author.name}
+                              </small>
+                              <small class="text-muted text-center">
+                              ${news.author.published_date.slice(0, 10)}</small>
                             </div>
                           </div>
       
                           <!-- news watch -->
-                          <div class="d-flex align-items-center">
+                          <div class="d-flex align-items-center mx-auto pe-2 pb-2">
                             <p class=""><i class="fa-duotone fa-eye"> </i></p>
                             <p class="fw-bold">
                               <span id="views" class="fw-bold"> ${
@@ -118,7 +121,7 @@ const category = (element, id) => {
       
                           <!-- reating -->
                           <div
-                            class="reat d-flex justify-content-center align-items-center"
+                            class="reat d-flex justify-content-center align-items-center mx-auto pe-2 pb-2"
                           >
                             <i class="fa-duotone fa-star"></i>
                             <i class="fa-duotone fa-star"></i>
@@ -128,12 +131,14 @@ const category = (element, id) => {
                           </div>
       
                           <!-- show more button -->
+                          <div class="d-flex justify-content-center mx-auto">
                           <button onClick="viweMore('${news._id}')" 
-                          class="btn btn-light" 
+                          class="btn btn-light mt-2" 
                           data-bs-toggle="modal" data-bs-target="#viewMoreModal"
                           >
                             <i class="fa-duotone fa-arrow-right"></i>
                           </button>
+                          </div>
                         </div>
                       </div>
                     </div>
