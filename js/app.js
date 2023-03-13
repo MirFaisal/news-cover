@@ -49,6 +49,9 @@ const category = (element, id) => {
 
   function loaddata(data) {
     loader(false);
+
+    data = data.sort((a, b) => b.total_view - a.total_view);
+
     const foundNews = document.getElementById("found-result");
     foundNews.innerText = data.length;
 
