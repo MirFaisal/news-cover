@@ -91,7 +91,7 @@ const category = (id) => {
                                 news.author.name
                               }</small>
                               <small class="text-muted">${
-                                news.author.published_datee
+                                news.author.published_date
                               }</small>
                             </div>
                           </div>
@@ -118,7 +118,10 @@ const category = (id) => {
                           </div>
       
                           <!-- show more button -->
-                          <button class="btn btn-light">
+                          <button onClick="viweMore('${news._id}')" 
+                          class="btn btn-light" 
+                          data-bs-toggle="modal" data-bs-target="#viewMoreModal"
+                          >
                             <i class="fa-duotone fa-arrow-right"></i>
                           </button>
                         </div>
@@ -133,6 +136,32 @@ const category = (id) => {
     }
   }
 };
+
+// view More button event handelar
+function viweMore(newsId) {
+  // creating dynamic url
+  const url = `https://openapi.programming-hero.com/api/news/${newsId}`;
+
+  //load data for more news information
+  const loadNewsInfo = async (url) => {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    loadDataInModal(data.data[0]);
+  };
+
+  //show data in to modal
+  const loadDataInModal = (data) => {
+    const viewMoreModalLabel = document.getElementById("viewMoreModalLabel");
+    viewMoreModalLabel.innerText = data.title;
+    const heroImage = document.getElementById("hero-image");
+    heroImage.setAttribute("src", `${data.image_url}`);
+
+    const newsTxet = document.getElementById("news-txet");
+    newsTxet.innerText = data.details;
+  };
+  loadNewsInfo(url);
+}
 
 // loader function
 const loader = (boolean) => {

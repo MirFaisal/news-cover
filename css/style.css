@@ -32,6 +32,10 @@ body {
 .btn {
   color: var(--blur) !important;
 }
+.active {
+  color: var(--blur);
+  border-bottom: 2px solid var(--blur);
+}
 
 /* navbar style */
 #header .navbar {
@@ -75,4 +79,9 @@ body {
 /* main sectio style */
 #main .news-wrapper .card .card-body .author img {
   width: 50px !important;
+}
+#main .modal-dialog {
+  max-width: 1000px !important;
+  margin-right: auto;
+  margin-left: auto;
 }

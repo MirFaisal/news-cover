@@ -91,9 +91,8 @@
     <!-- main section start -->
     <div id="main">
       <div class="container">
+        <!-- news item -->
         <div id="news-wrapper" class="news-wrapper">
-          <!-- news item -->
-
           <div class="card mb-3 p-2">
             <div class="row g-0">
               <!-- news thumbnail -->
@@ -150,11 +149,46 @@
                     </div>
 
                     <!-- show more button -->
-                    <button class="btn btn-light">
+                    <button
+                      class="btn btn-light"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
                       <i class="fa-duotone fa-arrow-right"></i>
                     </button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="viewMoreModal"
+          tabindex="-1"
+          aria-labelledby="viewMoreModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="viewMoreModalLabel">
+                  Modal title
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                  <img alt="" id="hero-image" class="img-fluid mb-5" />
+                </div>
+                <div class="text" id="news-txet"></div>
               </div>
             </div>
           </div>
